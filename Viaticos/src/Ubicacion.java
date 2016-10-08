@@ -10,8 +10,11 @@ public class Ubicacion {
         this.idUbicacion = idUBicacion;
         this.nobreUbi = nobreUbi;
         this.pernocta = pernocta;
+
+
     }
 
-
-
+    public void guardaar(){
+        System.out.println("Exito al guardar");
+    }
 }
