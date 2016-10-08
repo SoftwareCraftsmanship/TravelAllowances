@@ -14,7 +14,7 @@ public class Ubicacion {
 
     }
 
-    public void guardaar(){
-    bbiuiu
+    public void guardar(){
+
     }
 }
