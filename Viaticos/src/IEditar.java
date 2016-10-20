@@ -3,6 +3,6 @@
  */
 public interface IEditar<G> {
 
-    void Editar(G g);
+    public <G> G Editar(G entidad);
 
 }
