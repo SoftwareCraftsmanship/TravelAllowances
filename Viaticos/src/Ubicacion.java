@@ -14,7 +14,12 @@ public class Ubicacion {
 
     }
 
+    public void ActualizaUbi(Ubicacion u){
+
+    }
+
     public void guardaar(){
         System.out.println("Exito al guardar");
     }
+
 }
