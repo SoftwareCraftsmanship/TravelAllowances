@@ -18,7 +18,7 @@ public class Ubicacion {
 
     }
 
-    public void guardaar(){
+    public void guardar(){
         System.out.println("Exito al guardar");
     }
 
