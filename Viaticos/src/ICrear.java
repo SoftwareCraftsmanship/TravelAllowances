@@ -3,6 +3,6 @@
  */
 public interface ICrear<G> {
 
-    public <G> G crear(G entidad);
+    public<G> G crear(G entidad);
 
 }
