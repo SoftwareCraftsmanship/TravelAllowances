@@ -9,7 +9,7 @@ public class Principal {
 
     public static void prueba(){
         try {
-            ICrear generic = new GenericCrud();
+            GenericCrud generic = new GenericCrud();
             generic.crear(new Object());
         }catch (Exception e){
             System.out.print(e.getMessage());
