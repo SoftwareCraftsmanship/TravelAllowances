@@ -1,3 +1,5 @@
+import Persist.GenericCrud;
+
 /**
  * Created by ANA_SERVICIO5 on 21/10/2016.
  */
@@ -5,6 +7,7 @@ public class Principal {
     public static void main(String args[]){
 
         prueba();
+        cargarDatos();
     }
 
     public static void prueba(){
@@ -14,5 +17,9 @@ public class Principal {
         }catch (Exception e){
             System.out.print(e.getMessage());
         }
+    }
+
+    private static void cargarDatos(){
+
     }
 }
