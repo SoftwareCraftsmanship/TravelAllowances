@@ -10,7 +10,6 @@ public class Ubicacion {
     private String nobreUbi;
     private boolean pernocta;
 
-
     public Ubicacion(String codigoUbi,String nobreUbi, boolean pernocta){
         this.codigoUbi = codigoUbi;
         this.nobreUbi = nobreUbi;
@@ -18,6 +17,16 @@ public class Ubicacion {
     }
 
     public void ActualizaUbi(Ubicacion u){
+    }
+
+    public List<Ubicacion> getUbicacionList(){
+
+        List<Ubicacion> ubicacionList = new ArrayList<Ubicacion>();
+        ubicacionList.add(new Ubicacion("13001","Cartagena",true));
+        ubicacionList.add(new Ubicacion("08001","Barranquilla",true));
+        ubicacionList.add(new Ubicacion("47001","Santa Marta",true));
+
+        return ubicacionList;
     }
 
     public void guardar(){
