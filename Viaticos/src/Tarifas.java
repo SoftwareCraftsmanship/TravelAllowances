@@ -9,6 +9,14 @@ public class Tarifas {
     private Double Transporte;
     private Double Urbano;
 
+    public Tarifas(Ubicacion origen, Ubicacion destino, Double viaticoPer, Double viaticoNoPer, Double transporte, Double urbano) {
+        this.origen = origen;
+        this.destino = destino;
+        this.viaticoPer = viaticoPer;
+        this.viaticoNoPer = viaticoNoPer;
+        Transporte = transporte;
+        Urbano = urbano;
+    }
 
     public Ubicacion getOrigen() {
         return origen;

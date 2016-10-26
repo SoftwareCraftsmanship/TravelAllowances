@@ -10,6 +10,8 @@ import java.util.List;
 public class Principal {
 
     private static List<Ubicacion> ubicacionList = new ArrayList<Ubicacion>();
+    private static List<Tarifas> tarifasList = new ArrayList<Tarifas>();
+
 
     public static void main(String args[]){
 
@@ -27,14 +29,24 @@ public class Principal {
     }
 
     private static void cargarDatos(){
+        //carga de ubicaciones
+        Ubicacion carta = new Ubicacion("13001","Cartagena",true);
+        Ubicacion barranq = new Ubicacion("08001","Barranquilla",true);
+        Ubicacion StaMta = new Ubicacion("47001","Santa Marta",true);
+        ubicacionList.add(carta);
+        ubicacionList.add(barranq);
+        ubicacionList.add(StaMta);
 
-        ubicacionList.add(new Ubicacion("13001","Cartagena",true));
-        ubicacionList.add(new Ubicacion("08001","Barranquilla",true));
-        ubicacionList.add(new Ubicacion("47001","Barranquilla",true));
-
-        Iterator iter = ubicacionList.iterator();
+        /*Iterator iter = ubicacionList.iterator();
         while (iter.hasNext())
-            System.out.println(iter.next());
+            System.out.println(iter.next());*/
+
+        //carga de tarifas
+        //origen-destino-pernoctado-noPernoctado-transporteIntermu-urbano
+        tarifasList.add(new Tarifas(carta,barranq,new Double(180000),new Double(110000),new Double(120000),new Double(30000)));
+        tarifasList.add(new Tarifas(barranq,StaMta,new Double(180000),new Double(110000),new Double(30000),new Double(20000)));
+        tarifasList.add(new Tarifas(StaMta,carta,new Double(180000),new Double(110000),new Double(140000),new Double(20000)));
+
     }
 
 }
