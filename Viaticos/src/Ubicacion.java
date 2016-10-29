@@ -10,6 +10,10 @@ public class Ubicacion {
     private String nobreUbi;
     private boolean pernocta;
 
+    public Ubicacion(){
+
+    }
+
     public Ubicacion(String codigoUbi,String nobreUbi, boolean pernocta){
         this.codigoUbi = codigoUbi;
         this.nobreUbi = nobreUbi;

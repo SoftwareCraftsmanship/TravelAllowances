@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by ANA_SERVICIO5 on 24/10/2016.
  */
@@ -16,6 +19,18 @@ public class Tarifas {
         this.viaticoNoPer = viaticoNoPer;
         Transporte = transporte;
         Urbano = urbano;
+    }
+
+    public List<Tarifas> getListTarifas(){
+        Ubicacion ubicaciones = new Ubicacion();
+        //List<Ubicacion> listUbicaciones = new ArrayList<Ubicacion>();
+        //listUbicaciones =  ubicaciones.getUbicacionList();
+        List<Tarifas> tarifasList = new ArrayList<Tarifas>();
+
+        tarifasList.add(new Tarifas(ubicaciones.,barranq,new Double(180000),new Double(110000),new Double(120000),new Double(30000)));
+        tarifasList.add(new Tarifas(barranq,StaMta,new Double(180000),new Double(110000),new Double(30000),new Double(20000)));
+        tarifasList.add(new Tarifas(StaMta,carta,new Double(180000),new Double(110000),new Double(140000),new Double(20000)));
+        return null;
     }
 
     public Ubicacion getOrigen() {

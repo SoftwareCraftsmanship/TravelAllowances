@@ -10,8 +10,6 @@ import java.util.List;
 public class Principal {
 
     private static List<Ubicacion> ubicacionList = new ArrayList<Ubicacion>();
-    private static List<Tarifas> tarifasList = new ArrayList<Tarifas>();
-
 
     public static void main(String args[]){
 
@@ -43,9 +41,6 @@ public class Principal {
 
         //carga de tarifas
         //origen-destino-pernoctado-noPernoctado-transporteIntermu-urbano
-        tarifasList.add(new Tarifas(carta,barranq,new Double(180000),new Double(110000),new Double(120000),new Double(30000)));
-        tarifasList.add(new Tarifas(barranq,StaMta,new Double(180000),new Double(110000),new Double(30000),new Double(20000)));
-        tarifasList.add(new Tarifas(StaMta,carta,new Double(180000),new Double(110000),new Double(140000),new Double(20000)));
 
     }
 
