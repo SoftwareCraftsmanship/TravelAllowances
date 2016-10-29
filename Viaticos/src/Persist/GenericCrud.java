@@ -21,8 +21,6 @@ public class GenericCrud<G> implements IConsultar<G>, IEditar<G>, ICrear<G> {
         }catch (FileNotFoundException e) {
             throw new Excepciones("No se encontro archivo de configuracion",e);
         }
-
-
     }
 
     public <G> G crear(G entidad) {
