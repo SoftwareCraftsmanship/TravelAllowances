@@ -1,5 +1,7 @@
 import Persist.GenericCrud;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -12,9 +14,22 @@ public class Principal {
     private static List<Ubicacion> ubicacionList = new ArrayList<Ubicacion>();
 
     public static void main(String args[]){
+        BufferedReader bf = new BufferedReader (new InputStreamReader(System.in));
+        int origen;
+        int destino;
+        try {
+            System.out.print("Ubicacion de Origen");
+            origen = Integer.parseInt(bf.readLine());
+            System.out.print("Ubicacion de destino");
+            destino = Integer.parseInt(bf.readLine());
+            IGestionarUbicacion gu = new GestionarUbicacion();
+            Ubicacion ubi = new Ubicacion(gu);
+            System.out.print(gu.buscarById(origen).getNobreUbi());
 
-        prueba();
-        cargarDatos();
+        }catch(Exception e){
+         e.printStackTrace();
+        }
+
 
     }
 
@@ -27,23 +42,7 @@ public class Principal {
         }
     }
 
-    private static void cargarDatos(){
-        //carga de ubicaciones
-        Ubicacion carta = new Ubicacion("13001","Cartagena",true);
-        Ubicacion barranq = new Ubicacion("08001","Barranquilla",true);
-        Ubicacion StaMta = new Ubicacion("47001","Santa Marta",true);
-        ubicacionList.add(carta);
-        ubicacionList.add(barranq);
-        ubicacionList.add(StaMta);
 
-        /*Iterator iter = ubicacionList.iterator();
-        while (iter.hasNext())
-            System.out.println(iter.next());*/
-
-        //carga de tarifas
-        //origen-destino-pernoctado-noPernoctado-transporteIntermu-urbano
-
-    }
 
 }
 

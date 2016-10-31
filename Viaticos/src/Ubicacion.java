@@ -20,7 +20,8 @@ public class Ubicacion {
 
     }
 
-    public Ubicacion(String codigoUbi,String nobreUbi, boolean pernocta){
+    public Ubicacion(int idUbicacion,String codigoUbi,String nobreUbi, boolean pernocta){
+        this.idUbicacion = idUbicacion;
         this.codigoUbi = codigoUbi;
         this.nobreUbi = nobreUbi;
         this.pernocta = pernocta;
@@ -32,9 +33,9 @@ public class Ubicacion {
 
     public List<Ubicacion> getUbicacionList(){
         List<Ubicacion> ubicacionList = new ArrayList<Ubicacion>();
-        ubicacionList.add(new Ubicacion("13001","Cartagena",true));
-        ubicacionList.add(new Ubicacion("08001","Barranquilla",true));
-        ubicacionList.add(new Ubicacion("47001","Santa Marta",true));
+        ubicacionList.add(new Ubicacion(13001,"13001","Cartagena",true));
+        ubicacionList.add(new Ubicacion(13001,"08001","Barranquilla",true));
+        ubicacionList.add(new Ubicacion(13001,"47001","Santa Marta",true));
         return ubicacionList;
     }
 
@@ -56,5 +57,21 @@ public class Ubicacion {
 
     public void setIdUbicacion(int idUbicacion) {
         this.idUbicacion = idUbicacion;
+    }
+
+    public String getNobreUbi() {
+        return nobreUbi;
+    }
+
+    public void setNobreUbi(String nobreUbi) {
+        this.nobreUbi = nobreUbi;
+    }
+
+    public boolean isPernocta() {
+        return pernocta;
+    }
+
+    public void setPernocta(boolean pernocta) {
+        this.pernocta = pernocta;
     }
 }
