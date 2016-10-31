@@ -16,7 +16,35 @@ public class Ruta {
         this.destino = destino;
     }
 
+    public Date getFechaIncial() {
+        return fechaIncial;
+    }
 
+    public void setFechaIncial(Date fechaIncial) {
+        this.fechaIncial = fechaIncial;
+    }
 
+    public Date getFechaFinal() {
+        return fechaFinal;
+    }
 
+    public void setFechaFinal(Date fechaFinal) {
+        this.fechaFinal = fechaFinal;
+    }
+
+    public Ubicacion getOrigen() {
+        return origen;
+    }
+
+    public void setOrigen(Ubicacion origen) {
+        this.origen = origen;
+    }
+
+    public Ubicacion getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Ubicacion destino) {
+        this.destino = destino;
+    }
 }
