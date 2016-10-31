@@ -24,10 +24,11 @@ public class Tarifas {
     public List<Tarifas> getListTarifas(){
         List<Tarifas> tarifasList = new ArrayList<Tarifas>();
         IGestionarUbicacion gu = new GestionarUbicacion();
+        Ubicacion ubi = new Ubicacion(gu);
 
-        tarifasList.add(new Tarifas(gu.buscarById(13001),gu.buscarById(8001),new Double(180000),new Double(110000),new Double(120000),new Double(30000)));
-        tarifasList.add(new Tarifas(gu.buscarById(8001),gu.buscarById(47001),new Double(180000),new Double(110000),new Double(30000),new Double(20000)));
-        tarifasList.add(new Tarifas(gu.buscarById(47001),gu.buscarById(13001),new Double(180000),new Double(110000),new Double(140000),new Double(20000)));
+        tarifasList.add(new Tarifas(ubi.buscarById(13001),ubi.buscarById(8001),new Double(180000),new Double(110000),new Double(120000),new Double(30000)));
+        tarifasList.add(new Tarifas(ubi.buscarById(8001),ubi.buscarById(47001),new Double(180000),new Double(110000),new Double(30000),new Double(20000)));
+        tarifasList.add(new Tarifas(ubi.buscarById(47001),ubi.buscarById(13001),new Double(180000),new Double(110000),new Double(140000),new Double(20000)));
         return tarifasList;
     }
 

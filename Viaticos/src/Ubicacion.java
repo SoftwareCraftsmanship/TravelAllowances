@@ -10,6 +10,12 @@ public class Ubicacion {
     private String nobreUbi;
     private boolean pernocta;
 
+    IGestionarUbicacion ig;
+
+    public Ubicacion (IGestionarUbicacion ig){
+        this.ig=ig;
+    }
+
     public Ubicacion(){
 
     }
@@ -20,16 +26,15 @@ public class Ubicacion {
         this.pernocta = pernocta;
     }
 
-    public void ActualizaUbi(Ubicacion u){
+    public Ubicacion buscarById(int id){
+        return ig.buscarById(id);
     }
 
     public List<Ubicacion> getUbicacionList(){
-
         List<Ubicacion> ubicacionList = new ArrayList<Ubicacion>();
         ubicacionList.add(new Ubicacion("13001","Cartagena",true));
         ubicacionList.add(new Ubicacion("08001","Barranquilla",true));
         ubicacionList.add(new Ubicacion("47001","Santa Marta",true));
-
         return ubicacionList;
     }
 
@@ -43,5 +48,13 @@ public class Ubicacion {
                 "codigoUbi='" + codigoUbi + '\'' +
                 ", nobreUbi='" + nobreUbi + '\'' +
                 '}';
+    }
+
+    public int getIdUbicacion() {
+        return idUbicacion;
+    }
+
+    public void setIdUbicacion(int idUbicacion) {
+        this.idUbicacion = idUbicacion;
     }
 }

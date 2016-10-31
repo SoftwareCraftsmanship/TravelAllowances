@@ -15,6 +15,7 @@ public class Principal {
 
         prueba();
         cargarDatos();
+
     }
 
     public static void prueba(){
